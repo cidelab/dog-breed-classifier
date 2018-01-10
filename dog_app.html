@@ -15903,7 +15903,7 @@ RK5CYII=
 <p>We have imported some Python modules to get you started, but feel free to import as many modules as you need.  If you end up getting stuck, here's a hint that specifies a model that trains relatively fast on CPU and attains &gt;1% test accuracy in 5 epochs:</p>
 <p><img src="images/sample_cnn.png" alt="Sample CNN"></p>
 <p><strong>Question 4:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  If you chose to use the hinted architecture above, describe why you think that CNN architecture should work well for the image classification task.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> I chose to use an architecture similar to the VGG16 network, only using one convolutional lay for each convolutional block. I chose to use the suggested GAP and single output layer, but with a BatchNormalization layer to normalize the output from the GAP layer. The single output layer performed about as good as when adding other dense layers, but took less time to train and was less prone to overfitting.</p>
 
 </div>
 </div>
@@ -16701,7 +16701,8 @@ test_{network} = bottleneck_features['test']</code></pre>
 
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> I kept the same top model as my scratch model and used the Inception model as a feature extractor. I played around with more complicated networks, but this simple network seemed to work just as well. I extended this model architecture to the other pretrained models and also tried data augmentation. I then organized the best models into an ensemble. Below, I have the basic Inception model and then show the better model of the ensemble of different models. The process of reaching that was pretty involved so I organized it in a separate notebook which can be viewed <a href="http://nbviewer.jupyter.org/github/macbrennan90/udacity_AIND_P5/blob/master/dog_project_workbook.ipynb">here</a>.</p>
+<p>This architecture is suitable because it outperforms all the other models. Specifically, the use of pretrained networks to extract the features of the images drastically improves the accuracy of the model since the pretrained models were trained on a much larger, much more diverse training set, for much longer. The GAP layer feeding directly to the output nodes also allows for the visualization of what the model is seeing. This is touched on briefly in the additional notebook mentioned above. Additionally, the small models make inference and training faster.</p>
 
 </div>
 </div>
@@ -16953,7 +16954,8 @@ Epoch 10/10
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The process in reaching this model can be found in <a href=https://github.com/macbrennan90/udacity_AIND_P5/blob/master/dog_project_workbook.ipynb>this</a> notebook which organizes a lot of experimentation that went into reaching this model.</p>
+<p>The process in reaching this model can be found in 
+<a href="http://nbviewer.jupyter.org/github/macbrennan90/udacity_AIND_P5/blob/master/dog_project_workbook.ipynb">this</a> notebook which organizes a lot of experimentation that went into reaching this model.</p>
 
 </div>
 </div>
