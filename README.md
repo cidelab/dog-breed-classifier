@@ -5,15 +5,7 @@
      alt='Dog Project Pipeline'>
 </p>
 
-This project was to build an end to end algorithm that takes and image of a human or dog face, determines which it is, then gives a prediction for the most likely dog breed.
-
-The model for the dog breed classification was able to obtain an accuracy rate of 93.6% on 133 breeds.
-
-
-<p style='text-align: center !important;'>
-<img src='https://github.com/macbrennan90/macbrennan90.github.io/blob/master/images/dog-project-pipeline.png?raw=true'
-     alt='Dog Project Pipeline'>
-</p>
+This project was to build an end to end algorithm that takes and image of a human or dog face, determines which it is, then gives a prediction for the most likely dog breed. The model for the dog breed classification was able to obtain an accuracy rate of 93.6% on 133 breeds.
 
 An overview of the project is described in <a href=https://macbrennan90.github.io/dog-breed-classifier.html>this blog post</a>.
 
